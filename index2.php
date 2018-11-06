@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spalvos</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
 <?php
 $str = file_get_contents('data.json');
 $dataArray = json_decode($str, true);
@@ -28,13 +41,33 @@ foreach($dataArray as $mydata)
          
     }
     */
+    /*
 function funkcija($dataArray){
-    if(is_array($dataArray)){
-       foreach ($dataArray as $items) {
-            var_dump($items);
+       foreach ($dataArray as $data) {
+            foreach ($data as $item) {
+                if(is_array($item)){
+                    foreach ($item as $values) {
+                        var_dump($values);
+                    }
+                }
+            }
+            
         } 
-    }
+    
     
 }
-funkcija($dataArray);  
+funkcija($dataArray);
+*/
+function funkcija2($dataArray){
+    foreach ($dataArray as $data1) {
+        foreach ($data1 as $colors) {
+            if(is_array($colors)){
+                foreach ($colors as $values) {
+                    var_dump($values);
+                }
+            }
+        }
+    }
+}
+funkcija2($dataArray);  
 
