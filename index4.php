@@ -27,9 +27,12 @@
 							if (is_array($vaizdoo)) {
 								foreach ($vaizdoo as $vaizdooo) {
 									var_dump($vaizdooo);
-									//if (is_string($vaizdooo)) {
-										//echo "<iframe width=420 height=315 id=" . $vaizdooo. "></iframe>";
-									//}
+									if (is_string($vaizdooo)) {
+										if ($vaizdooo == 'youtube#channel' || $vaizdooo == 'youtube#video') {
+											echo "<iframe width=420 height=315 src='https://www.youtube.com/embed/" . $vaizdooo. "'></iframe>";
+										}
+										
+									}
 								}
 							}
 						}
